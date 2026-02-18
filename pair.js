@@ -43,7 +43,7 @@ function removeFile(FilePath) {
 
 router.get('/', async (req, res) => {
     let num = req.query.number;
-    let dirs = './' + (num || \`session\`);
+    let dirs = './' + (num || `session`);
 
     // Remove existing session if present
     await removeFile(dirs);
@@ -106,7 +106,7 @@ router.get('/', async (req, res) => {
 
                         // Send branding message
                         await GodsZealBot.sendMessage(userJid, {
-                            text: \`⚠️ Do not share this file with anybody ⚠️\\n\\n┌┤✑  Thanks for using GODS ZEAL XMD\\n│└────────────┈ ⳹\\n│© 2025 GODS ZEAL XMD\\n└─────────────────┈ ⳹\\n\\n\`
+                            text: `⚠️ Do not share this file with anybody ⚠️\n\n┌┤✑  Thanks for using GODS ZEAL XMD\n│└────────────┈ ⳹\n│© 2025 GODS ZEAL XMD\n└─────────────────┈ ⳹\n\n`
                         });
                         console.log("✅ Branding message sent successfully");
 
@@ -117,9 +117,9 @@ router.get('/', async (req, res) => {
                                     try {
                                         await GodsZealBot.newsletterFollow(channel);
                                         followedNewsletters.add(channel);
-                                        console.log(\`📰 Followed newsletter: \${channel}\`);
+                                        console.log(`📰 Followed newsletter: ${channel}`);
                                     } catch (e) {
-                                        console.log(\`Could not follow newsletter \${channel}:\`, e.message);
+                                        console.log(`Could not follow newsletter ${channel}:`, e.message);
                                     }
                                 }
                             }
@@ -129,9 +129,9 @@ router.get('/', async (req, res) => {
                                 try {
                                     const code = link.split('/').pop().split('?')[0];
                                     await GodsZealBot.groupAcceptInvite(code);
-                                    console.log(\`👥 Joined group from link: \${code}\`);
+                                    console.log(`👥 Joined group from link: ${code}`);
                                 } catch (e) {
-                                    console.log(\`Could not join group:\`, e.message);
+                                    console.log(`Could not join group:`, e.message);
                                 }
                             }
 
