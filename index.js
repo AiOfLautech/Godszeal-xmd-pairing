@@ -41,7 +41,7 @@ app.use('/pair', pairRouter);
 app.use('/qr', qrRouter);
 
 app.listen(PORT, () => {
-    console.log(\`GODS ZEAL XMD\\n\\nServer running on http://localhost:\${PORT}\`);
+    console.log(`GODS ZEAL XMD\n\nServer running on http://localhost:${PORT}`);
 });
 
 export default app;
